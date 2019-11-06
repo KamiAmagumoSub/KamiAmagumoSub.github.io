@@ -1528,8 +1528,60 @@ function opacityit(obj){
 
 <a href="https://kamiamagumosub.github.io/Summer2010/Campanella.html"><img src="images/Campanella.png" width="417" height="216" border="0" style="FILTER: alpha(opacity=100);-moz-opacity: 1.0; opacity: 1.0;" onmouseover=BeginOpacity(this,100,40) onmouseout=EndOpacity(this,100)></a>
 </div>
-<div id="image5" style="position:absolute; overflow:hidden; left:438px; top:62px; width:834px; height:216px; z-index:35"><a href="YuruYuriOVA.html"><img src="images/yuruyuriova.png" alt="" title="" border=0 width=834 height=216></a></div>
+<div style="position:absolute; top:62; left:438; z-index:35">
+<script language=JavaScript>
+<!--
+var itv = 50;
+var step = 10;
+var start = 0;
+var end = 0;
+var currentOpac;
 
+//change the opacity for different browsers
+function changeOpac(obj, opacity) {
+	var object = obj.style; 
+	object.opacity = (opacity / 100);
+	object.MozOpacity = (opacity / 100);
+	object.KhtmlOpacity = (opacity / 100);
+	object.filter = "alpha(opacity=" + opacity + ")";
+}
+
+function BeginOpacity(obj, s, e)
+{
+	start = s;
+	end = e;
+	currentOpac = s;
+	theobject=obj;
+	changing=setInterval("opacityit(theobject)",itv);
+}
+
+function EndOpacity(obj, end){
+	clearInterval(changing);
+	changeOpac(obj, end);
+}
+
+function opacityit(obj){
+	if(start > end) {
+		if (currentOpac>end){
+			currentOpac = currentOpac - step;
+			changeOpac(obj,currentOpac);
+		}
+		else if (window.highlighting)
+			clearInterval(highlighting);
+	} else if(start < end) {
+		if (currentOpac<end){
+			currentOpac = currentOpac + step;
+			changeOpac(obj,currentOpac);
+		}
+		else if (window.changing)
+			clearInterval(changing);
+	}
+}
+//-->
+</script>
+
+<a href="YuruYuriOVA.html"><img src="images/yuruyuriova.png" width="834" height="216" border="0" style="FILTER: alpha(opacity=100);-moz-opacity: 1.0; opacity: 1.0;" onmouseover=BeginOpacity(this,100,40) onmouseout=EndOpacity(this,100)></a>
+</div>
 </div>
 
 </body>
