@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "KAGS Homepage",
-    "currentPage": "Project.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise-amp",
       "title": "Mobirise AMP",
@@ -198,34 +198,6 @@
           "_customHTML": "<section class=\"amp-facebook-page mbr-section\" group=\"Custom block\" plugins=\"amp-main, amp-facebook-page\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\n        <header>Facebook</header>\n        <input type=\"text\" title=\"'Page'\" name=\"facebookPage\" value=\"https://www.facebook.com/KamiAmagumoSub/\">\n        <input type=\"text\" inline title=\"Tabs (timeline, events)\" name=\"fbDataTabs\" value=\"timeline, events\">\n\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../assets/background.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#7ae6ff\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#f6efe9\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"bg.type!='color' && overlay\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container align-center\">\n        <div class=\"title\">\n            <h3 class=\"mbr-fonts-style mbr-bold mbr-section-title\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                Facebook Fanpage</h3>\n            <h4 class=\"mbr-fonts-style mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">กดถูกใจกันไว้ด้วยเน้อ!</h4>\n        </div>\n        <div class=\"facebook-page-wrapper\">\n            <amp-facebook-page width=\"16\" height=\"9\" layout=\"responsive\" data-tabs=\"{{fbDataTabs}}\" data-href=\"https://www.facebook.com/KamiAmagumoSub/\">\n            </amp-facebook-page>\n        </div>\n    </div>\n\n</section>",
           "_cid": "rUkHRq7iMc",
           "_anchor": "facebook-page-c",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@showTitle), (@showSubtitle)": {
-              "@media (max-width: 767px)": {
-                ".btn-container when (@showButton)": {
-                  "padding-top": "1rem"
-                }
-              }
-            }
-          },
-          "_name": "info1",
-          "_customHTML": "<section class=\"info1\" group=\"Testimonials & Info\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Button\" name=\"showButton\" checked>\n        <input type=\"checkbox\" title=\"Text on Left/Right\" name=\"flexDirection\" condition=\"(showTitle || showSubtitle) && showButton\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#a0a0a0\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-jc-c\" mbr-class=\"{'mbr-row-reverse': flexDirection}\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-8\" mbr-if=\"showTitle || showSubtitle\">\n                <h2 class=\"mbr-section-title align-left mbr-fonts-style mbr-bold mbr-white\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"></h2>\n                <h3 class=\"mbr-section-subtitle align-left mbr-fonts-style mbr-light mbr-white mbr-py-1\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">เว็บไซน์นี้มีไว้เพื่อเป็นอีกช่องทางหนึ่งในการ Archive &nbsp;ผลงานของทาง KamiAmagumoSub ไว้เผื่อในกรณีที่ไม่สามารถตามหาลิงก์โหลดได้แล้ว อาจจะไม่ได้อัพเดตให้แบบ Real-time เหมือนในแฟนเพจหรือ Discord และคงไม่สวยหรูมากเท่าไหร่</h3>\n            </div>\n            <div class=\"btn-container mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 align-center mbr-flex\" mbr-if=\"showButton\">\n                <div class=\"mbr-section-btn mbr-m-auto\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-white-outline\" href=\"https://web.facebook.com/KamiAmagumoSub\" data-app-placeholder=\"Type Text\">ติดต่อสอบถามเพิ่มเติม</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "s3A3xVpxe0",
-          "_anchor": "info1-u",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
